@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPPE — Cargos e Atribuições (Promotorias) · Demonstrativo consolidado</title>
+<style>
+:root{--navy:#0E2A33;--navy2:#16404D;--lat:#B98A2F;--lat2:#D4A94E;--papel:#F6F4EE;
+--papel2:#EDE9DE;--tinta:#1A2428;--cinza:#6B7A80;--linha:#D8D2C4;--verde:#1F7D5C;--verm:#A13A52}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:'Public Sans',-apple-system,
+BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px 70px}
+header{background:var(--navy);color:var(--papel);border-bottom:3px solid var(--lat);position:relative}
+header:before{content:"";position:absolute;inset:0;pointer-events:none;
+background:radial-gradient(circle at 90% 10%,rgba(185,138,47,.22),transparent 55%)}
+.hin{max-width:1120px;margin:0 auto;padding:36px 22px 32px;position:relative;
+display:flex;flex-wrap:wrap;align-items:flex-start;gap:24px}
+.hl{flex:1 1 520px;min-width:290px}
+.eyebrow{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.19em;
+text-transform:uppercase;color:var(--lat2);margin-bottom:12px}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(23px,3.3vw,36px);
+line-height:1.14;letter-spacing:-.015em}
+.sub{color:#BFD0D4;font-size:14px;margin-top:11px;max-width:640px}
+.seal{flex:0 0 auto;width:106px;height:106px;border:1.5px solid var(--lat);border-radius:50%;
+display:flex;flex-direction:column;align-items:center;justify-content:center;
+background:rgba(185,138,47,.09);text-align:center}
+.seal b{font-family:'Fraunces',Georgia,serif;font-size:26px;color:var(--lat2);line-height:1}
+.seal span{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:8px;letter-spacing:.13em;
+text-transform:uppercase;color:#9FB6BC;margin-top:6px;padding:0 8px;line-height:1.3}
+.print-btn{margin-left:auto;align-self:flex-start;flex-shrink:0;white-space:nowrap;background:var(--lat);
+color:var(--navy);border:none;border-radius:7px;padding:10px 15px;cursor:pointer;
+font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;font-weight:600;letter-spacing:.05em}
+.print-btn:hover{background:var(--lat2)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:13px;margin:26px 0 6px}
+.kpi{background:#fff;border:1px solid var(--linha);border-top:3px solid var(--navy);
+border-radius:8px;padding:14px 15px}
+.kpi.v{border-top-color:var(--verm)}
+.kpi.g{border-top-color:var(--verde)}
+.kpi .kl{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.11em;
+text-transform:uppercase;color:var(--cinza);margin-bottom:7px}
+.kpi b{font-family:'Fraunces',Georgia,serif;font-size:27px;font-weight:600;display:block;line-height:1.05}
+.kpi small{display:block;color:var(--cinza);font-size:11.5px;margin-top:5px}
+section{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:24px;margin-top:22px}
+h2{font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:600;margin-bottom:4px}
+.cap{color:var(--cinza);font-size:12.5px;margin-bottom:18px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{background:var(--navy);color:var(--papel);font-family:'IBM Plex Mono',ui-monospace,monospace;
+font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;padding:11px 10px;
+text-align:left}
+td{padding:10px;border-bottom:1px solid var(--linha);vertical-align:top}
+tbody tr:nth-child(even){background:#FCFBF8}
+tbody tr:hover{background:#F2EEE2}
+td.nu{font-family:'IBM Plex Mono',ui-monospace,monospace;text-align:right;white-space:nowrap}
+td.cl{font-weight:600}
+td.tot{font-weight:700;background:var(--papel2)}
+td.sm{font-size:11.5px;color:#4A5860}
+tbody tr.fim td{border-top:2px solid var(--navy);background:var(--papel2);font-weight:700}
+.orig{margin-top:6px;font-size:11.5px;color:var(--cinza);line-height:1.5}
+.orig b{color:#3C4A50}
+.nota{border-left:4px solid var(--lat);background:#FCFBF8;padding:14px 16px;border-radius:0 8px 8px 0;
+margin-top:16px;font-size:13px;line-height:1.65}
+.nota b{color:var(--tinta)}
+footer{margin-top:32px;padding-top:20px;border-top:2px solid var(--navy);font-size:12px;
+color:var(--cinza);line-height:1.75}
+footer b{color:var(--tinta)}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px}
+@media(max-width:768px){table{font-size:12px}section{padding:16px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}}
+@media print{
+@page{size:A4 landscape;margin:11mm}
+body{background:#fff;color:#000}
+.print-btn{display:none!important}
+header{background:#fff;color:#000;border-bottom:2px solid #000}
+header:before{display:none}
+.eyebrow{color:#555}.sub{color:#444}
+.seal{border-color:#000;background:#fff}.seal b{color:#000}.seal span{color:#444}
+.kpi{background:#fff;border:1px solid #000;border-top:3px solid #000;break-inside:avoid}
+.kpi b{color:#000}
+section{background:#fff;border:1px solid #000;break-inside:avoid}
+th{background:#fff;color:#000;border-bottom:2px solid #000}
+tbody tr:nth-child(even){background:#fff}
+tbody tr:hover{background:#fff}
+tbody tr{page-break-inside:avoid}
+td.tot{background:#eee}
+tbody tr.fim td{background:#eee}
+.nota{background:#fff;border:1px solid #000;border-left:4px solid #000}
+footer{border-top:2px solid #000}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hin">
+    <div class="hl">
+      <div class="eyebrow">Ministério Público de Pernambuco · Quadro Geral de Membros</div>
+      <h1>Cargos e Atribuições</h1>
+      <div class="sub">Demonstrativo consolidado da força de trabalho ministerial por atribuição —
+      <b>486 cargos de Promotor de Justiça</b> em 130 municípios e 16 circunscrições,
+      nas 3 entrâncias do 1º grau. <b>Excluídos os 58 cargos de Procurador de Justiça</b>
+      (2ª Instância). Modelo estrutural: GAJU/TJPE — Varas e Competências.</div>
+    </div>
+    <div class="seal"><b>486</b><span>cargos de<br>promotoria</span></div>
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi"><div class="kl">Cargos totais</div><b>486</b><small>quadro geral do MPPE</small></div>
+    <div class="kpi g"><div class="kl">Preenchidos</div><b>408</b><small>83,95% do quadro</small></div>
+    <div class="kpi v"><div class="kl">Vagos</div><b>78</b><small>16,05% do quadro</small></div>
+    <div class="kpi"><div class="kl">Atribuições</div><b>5</b><small>classes consolidadas</small></div>
+    <div class="kpi"><div class="kl">Municípios</div><b>130</b><small>unidades com atuação</small></div>
+    <div class="kpi" style="border-top-color:#B98A2F"><div class="kl">Excluídos</div><b>58</b>
+    <small>Procuradores de Justiça (2ª Inst.)</small></div>
+  </div>
+
+  <section>
+    <h2>Classificação da atribuição</h2>
+    <p class="cap">Distribuição dos 486 cargos pelas classes canônicas de atribuição, com situação
+    de provimento. A classificação deriva do campo <i>cargo</i> (mais específico) e, na sua ausência,
+    do campo <i>atribuição</i>.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Classificação da atribuição</th><th style="text-align:right">Cargos</th>
+      <th style="text-align:right">%</th><th style="text-align:right">Preenchidos</th>
+      <th style="text-align:right">Vagos</th></tr></thead>
+      <tbody>
+<tr><td class="cl">Crime</td><td class="nu">164</td><td class="nu">33,74%</td><td class="nu">147</td><td class="nu">17</td></tr>
+<tr><td class="cl">Única / Geral</td><td class="nu">147</td><td class="nu">30,25%</td><td class="nu">110</td><td class="nu">37</td></tr>
+<tr><td class="cl">Cidadania</td><td class="nu">87</td><td class="nu">17,90%</td><td class="nu">78</td><td class="nu">9</td></tr>
+<tr><td class="cl">Cível</td><td class="nu">71</td><td class="nu">14,61%</td><td class="nu">67</td><td class="nu">4</td></tr>
+<tr><td class="cl">Substituto</td><td class="nu">17</td><td class="nu">3,50%</td><td class="nu">6</td><td class="nu">11</td></tr>
+<tr class="fim"><td>TOTAL</td><td class="nu">486</td><td class="nu">100,00%</td>
+<td class="nu">408</td><td class="nu">78</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Demonstrativo por atribuição</h2>
+    <p class="cap">Municípios compreendidos por cada classe de atribuição, com o quantitativo de cargos.
+    Ao pé de cada linha, os rótulos de origem da fonte que foram consolidados na classe.</p>
+    <div class="scroll"><table>
+      <thead><tr><th style="width:220px">Atribuição</th><th>Municípios compreendidos</th></tr></thead>
+      <tbody>
+<tr><td class="cl">Crime — 164</td><td>Capital (Recife) (62); Caruaru (14); Jaboatão dos Guararapes (13); Olinda (11); Petrolina (10); Paulista (9); Garanhuns (6); Cabo de Santo Agostinho (6); Igarassu (3); Vitória de Santo Antão (3); Camaragibe (3); Santa Cruz do Capibaribe (2); Palmares (2); Ipojuca (2); Abreu e Lima (2); Goiana (2); Carpina (2); Gravatá (2); São Lourenço da Mata (2); Serra Talhada (2); Araripina (1); Salgueiro (1); Afogados da Ingazeira (1); Belo Jardim (1); Pesqueira (1); Limoeiro (1)<div class="orig"><b>Rótulos de origem:</b> Crime (164)</div></td></tr>
+<tr><td class="cl">Única / Geral — 147</td><td>Arcoverde (5); Afogados da Ingazeira (4); Ouricuri (3); Bezerros (3); Abreu e Lima (3); Limoeiro (3); Surubim (3); Salgueiro (2); São José do Egito (2); Sertânia (2); Belo Jardim (2); Água Preta (2); Escada (2); Igarassu (2); Timbaúba (2); Bonito (2); Gravatá (2); Moreno (2); Cabrobó (2); Buíque (2); Itamaracá (2); Custódia (2); Petrolândia (2); Capital (Recife) (1); São Bento do Una (1); Bom Conselho (1); Canhotinho (1); Altinho (1); Panelas (1); São Caetano (1); Catende (1); Barreiros (1); Ribeirão (1); Itambé (1); Nazaré da Mata (1); Bom Jardim (1); Carpina (1); Paudalho (1); Vertentes (1); Glória do Goitá (1); Serra Talhada (1); Bodocó (1); Exu (1); Ipubi (1); Parnamirim (1); Serrita (1); Trindade (1); Verdejante (1); Afrânio (1); Lagoa Grande (1); Orocó (1); Santa Maria da Boa Vista (1); Carnaíba (1); Itapetim (1); Tabira (1); Tuparetama (1); Alagoinha (1); Ibimirim (1); Inajá (1); Pedra (1); Sanharó (1); Venturosa (1); Águas Belas (1); Caetés (1); Capoeiras (1); Correntes (1); Iati (1); Itaíba (1); Jupi (1); Jurema (1); Lajedo (1); Saloá (1); São João (1); Agrestina (1); Brejo da Madre de Deus (1); Cachoeirinha (1); Camocim de São Félix (1); Cupira (1); Sairé (1); Tacaimbó (1); Taquaritinga do Norte (1); Toritama (1); Lagoa dos Gatos (1); Maraial (1); Quipapá (1); Amaraji (1); Cortês (1); Gameleira (1); Rio Formoso (1); São José da Coroa Grande (1); Sirinhaém (1); Tamandaré (1); Itapissuma (1); Aliança (1); Condado (1); Itaquitinga (1); Macaparana (1); Tracunhaém (1); Vicência (1); Cumaru (1); Feira Nova (1); João Alfredo (1); Lagoa de Itaenga (1); Orobó (1); Passira (1); Santa Maria do Cambucá (1); Pombos (1); São Joaquim do Monte (1); Belém do São Francisco (1); Flores (1); Floresta (1); Mirandiba (1); São José do Belmonte (1); Triunfo (1)<div class="orig"><b>Rótulos de origem:</b> Geral (147)</div></td></tr>
+<tr><td class="cl">Cidadania — 87</td><td>Capital (Recife) (44); Caruaru (7); Olinda (7); Jaboatão dos Guararapes (7); Paulista (6); Petrolina (5); Cabo de Santo Agostinho (5); Garanhuns (3); Carpina (2); Goiana (1)<div class="orig"><b>Rótulos de origem:</b> Defesa da Cidadania (85) · Cidadania (2)</div></td></tr>
+<tr><td class="cl">Cível — 71</td><td>Capital (Recife) (26); Olinda (4); Jaboatão dos Guararapes (4); Vitória de Santo Antão (4); Petrolina (3); Garanhuns (3); Palmares (3); Ipojuca (3); Goiana (3); Camaragibe (3); São Lourenço da Mata (3); Caruaru (2); Paulista (2); Araripina (2); Pesqueira (2); Santa Cruz do Capibaribe (2); Cabo de Santo Agostinho (1); Serra Talhada (1)<div class="orig"><b>Rótulos de origem:</b> Cível (48) · Cível e Defesa da Cidadania (23)</div></td></tr>
+<tr><td class="cl">Substituto — 17</td><td>Capital (Recife) (15); Salgueiro (2)<div class="orig"><b>Rótulos de origem:</b> Substituto (17)</div></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Atribuição por instância e entrância</h2>
+    <p class="cap">Cruzamento entre a classe de atribuição e o nível de atuação — onde cada atribuição
+    se concentra na estrutura do Ministério Público.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Atribuição</th><th style="text-align:right">3ª Entrância</th><th style="text-align:right">2ª Entrância</th><th style="text-align:right">1ª Entrância</th><th style="text-align:right">Total</th></tr></thead>
+      <tbody>
+<tr><td class="cl">Crime</td><td class="nu">119</td><td class="nu">45</td><td class="nu">0</td><td class="nu tot">164</td></tr>
+<tr><td class="cl">Única / Geral</td><td class="nu">1</td><td class="nu">61</td><td class="nu">85</td><td class="nu tot">147</td></tr>
+<tr><td class="cl">Cidadania</td><td class="nu">76</td><td class="nu">11</td><td class="nu">0</td><td class="nu tot">87</td></tr>
+<tr><td class="cl">Cível</td><td class="nu">41</td><td class="nu">30</td><td class="nu">0</td><td class="nu tot">71</td></tr>
+<tr><td class="cl">Substituto</td><td class="nu">15</td><td class="nu">0</td><td class="nu">2</td><td class="nu tot">17</td></tr>
+<tr class="fim"><td>TOTAL</td><td class="nu tot">252</td><td class="nu tot">147</td><td class="nu tot">87</td><td class="nu">486</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Consolidação</h2>
+    <p class="cap">Composição de cada macroárea de atribuição a partir dos rótulos da fonte e peso
+    relativo no quadro.</p>
+    <div class="scroll"><table>
+      <thead><tr><th style="width:200px">Macroárea</th><th>Composição</th>
+      <th style="text-align:right">Nº de cargos</th><th style="text-align:right">%</th></tr></thead>
+      <tbody>
+<tr><td class="cl">Crime</td><td>164 Crime</td><td class="nu">164</td><td class="nu">33,74%</td></tr>
+<tr><td class="cl">Única / Geral</td><td>147 Geral</td><td class="nu">147</td><td class="nu">30,25%</td></tr>
+<tr><td class="cl">Cidadania</td><td>85 Defesa da Cidadania + 2 Cidadania</td><td class="nu">87</td><td class="nu">17,90%</td></tr>
+<tr><td class="cl">Cível</td><td>48 Cível + 23 Cível e Defesa da Cidadania</td><td class="nu">71</td><td class="nu">14,61%</td></tr>
+<tr><td class="cl">Substituto</td><td>17 Substituto</td><td class="nu">17</td><td class="nu">3,50%</td></tr>
+<tr class="fim"><td>TOTAL</td><td>Quadro geral do MPPE</td><td class="nu">486</td>
+<td class="nu">100,00%</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Consolidação por instância e entrância</h2>
+    <p class="cap">Distribuição do quadro pelo nível de atuação.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Nível</th><th style="text-align:right">Cargos</th><th style="text-align:right">%</th>
+      <th style="text-align:right">Preenchidos</th><th style="text-align:right">Vagos</th></tr></thead>
+      <tbody>
+<tr><td class="cl">3ª Entrância</td><td class="nu">252</td><td class="nu">51,85%</td><td class="nu">215</td><td class="nu">37</td></tr>
+<tr><td class="cl">2ª Entrância</td><td class="nu">147</td><td class="nu">30,25%</td><td class="nu">142</td><td class="nu">5</td></tr>
+<tr><td class="cl">1ª Entrância</td><td class="nu">87</td><td class="nu">17,90%</td><td class="nu">51</td><td class="nu">36</td></tr>
+<tr class="fim"><td>TOTAL</td><td class="nu">486</td><td class="nu">100,00%</td>
+<td class="nu">408</td><td class="nu">78</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Demonstrativo por município</h2>
+    <p class="cap">Os 130 municípios do quadro, com a composição de atribuições de cada um.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Município</th><th style="text-align:right">Cargos</th>
+      <th style="text-align:right">%</th><th style="text-align:right">Preench.</th>
+      <th style="text-align:right">Vagos</th><th>Composição</th></tr></thead>
+      <tbody>
+<tr><td class="cl">Capital (Recife)</td><td class="nu">148</td><td class="nu">30,45%</td><td class="nu">116</td><td class="nu">32</td><td class="sm">Crime 62 · Única / Geral 1 · Cidadania 44 · Cível 26 · Substituto 15</td></tr>
+<tr><td class="cl">Jaboatão dos Guararapes</td><td class="nu">24</td><td class="nu">4,94%</td><td class="nu">23</td><td class="nu">1</td><td class="sm">Crime 13 · Cidadania 7 · Cível 4</td></tr>
+<tr><td class="cl">Caruaru</td><td class="nu">23</td><td class="nu">4,73%</td><td class="nu">22</td><td class="nu">1</td><td class="sm">Crime 14 · Cidadania 7 · Cível 2</td></tr>
+<tr><td class="cl">Olinda</td><td class="nu">22</td><td class="nu">4,53%</td><td class="nu">21</td><td class="nu">1</td><td class="sm">Crime 11 · Cidadania 7 · Cível 4</td></tr>
+<tr><td class="cl">Petrolina</td><td class="nu">18</td><td class="nu">3,70%</td><td class="nu">18</td><td class="nu">0</td><td class="sm">Crime 10 · Cidadania 5 · Cível 3</td></tr>
+<tr><td class="cl">Paulista</td><td class="nu">17</td><td class="nu">3,50%</td><td class="nu">15</td><td class="nu">2</td><td class="sm">Crime 9 · Cidadania 6 · Cível 2</td></tr>
+<tr><td class="cl">Garanhuns</td><td class="nu">12</td><td class="nu">2,47%</td><td class="nu">12</td><td class="nu">0</td><td class="sm">Crime 6 · Cidadania 3 · Cível 3</td></tr>
+<tr><td class="cl">Cabo de Santo Agostinho</td><td class="nu">12</td><td class="nu">2,47%</td><td class="nu">12</td><td class="nu">0</td><td class="sm">Crime 6 · Cidadania 5 · Cível 1</td></tr>
+<tr><td class="cl">Vitória de Santo Antão</td><td class="nu">7</td><td class="nu">1,44%</td><td class="nu">7</td><td class="nu">0</td><td class="sm">Crime 3 · Cível 4</td></tr>
+<tr><td class="cl">Goiana</td><td class="nu">6</td><td class="nu">1,23%</td><td class="nu">6</td><td class="nu">0</td><td class="sm">Crime 2 · Cidadania 1 · Cível 3</td></tr>
+<tr><td class="cl">Camaragibe</td><td class="nu">6</td><td class="nu">1,23%</td><td class="nu">6</td><td class="nu">0</td><td class="sm">Crime 3 · Cível 3</td></tr>
+<tr><td class="cl">Salgueiro</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">3</td><td class="nu">2</td><td class="sm">Crime 1 · Única / Geral 2 · Substituto 2</td></tr>
+<tr><td class="cl">Afogados da Ingazeira</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">4</td><td class="nu">1</td><td class="sm">Crime 1 · Única / Geral 4</td></tr>
+<tr><td class="cl">Arcoverde</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">5</td><td class="nu">0</td><td class="sm">Única / Geral 5</td></tr>
+<tr><td class="cl">Palmares</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">5</td><td class="nu">0</td><td class="sm">Crime 2 · Cível 3</td></tr>
+<tr><td class="cl">Ipojuca</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">5</td><td class="nu">0</td><td class="sm">Crime 2 · Cível 3</td></tr>
+<tr><td class="cl">Abreu e Lima</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">5</td><td class="nu">0</td><td class="sm">Crime 2 · Única / Geral 3</td></tr>
+<tr><td class="cl">Igarassu</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">5</td><td class="nu">0</td><td class="sm">Crime 3 · Única / Geral 2</td></tr>
+<tr><td class="cl">Carpina</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">5</td><td class="nu">0</td><td class="sm">Crime 2 · Única / Geral 1 · Cidadania 2</td></tr>
+<tr><td class="cl">São Lourenço da Mata</td><td class="nu">5</td><td class="nu">1,03%</td><td class="nu">5</td><td class="nu">0</td><td class="sm">Crime 2 · Cível 3</td></tr>
+<tr><td class="cl">Santa Cruz do Capibaribe</td><td class="nu">4</td><td class="nu">0,82%</td><td class="nu">4</td><td class="nu">0</td><td class="sm">Crime 2 · Cível 2</td></tr>
+<tr><td class="cl">Limoeiro</td><td class="nu">4</td><td class="nu">0,82%</td><td class="nu">3</td><td class="nu">1</td><td class="sm">Crime 1 · Única / Geral 3</td></tr>
+<tr><td class="cl">Gravatá</td><td class="nu">4</td><td class="nu">0,82%</td><td class="nu">4</td><td class="nu">0</td><td class="sm">Crime 2 · Única / Geral 2</td></tr>
+<tr><td class="cl">Serra Talhada</td><td class="nu">4</td><td class="nu">0,82%</td><td class="nu">3</td><td class="nu">1</td><td class="sm">Crime 2 · Única / Geral 1 · Cível 1</td></tr>
+<tr><td class="cl">Araripina</td><td class="nu">3</td><td class="nu">0,62%</td><td class="nu">3</td><td class="nu">0</td><td class="sm">Crime 1 · Cível 2</td></tr>
+<tr><td class="cl">Ouricuri</td><td class="nu">3</td><td class="nu">0,62%</td><td class="nu">2</td><td class="nu">1</td><td class="sm">Única / Geral 3</td></tr>
+<tr><td class="cl">Belo Jardim</td><td class="nu">3</td><td class="nu">0,62%</td><td class="nu">2</td><td class="nu">1</td><td class="sm">Crime 1 · Única / Geral 2</td></tr>
+<tr><td class="cl">Pesqueira</td><td class="nu">3</td><td class="nu">0,62%</td><td class="nu">3</td><td class="nu">0</td><td class="sm">Crime 1 · Cível 2</td></tr>
+<tr><td class="cl">Bezerros</td><td class="nu">3</td><td class="nu">0,62%</td><td class="nu">3</td><td class="nu">0</td><td class="sm">Única / Geral 3</td></tr>
+<tr><td class="cl">Surubim</td><td class="nu">3</td><td class="nu">0,62%</td><td class="nu">3</td><td class="nu">0</td><td class="sm">Única / Geral 3</td></tr>
+<tr><td class="cl">São José do Egito</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Sertânia</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">1</td><td class="nu">1</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Água Preta</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Escada</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Timbaúba</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Bonito</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Moreno</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Cabrobó</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">1</td><td class="nu">1</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Buíque</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Itamaracá</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Custódia</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">2</td><td class="nu">0</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">Petrolândia</td><td class="nu">2</td><td class="nu">0,41%</td><td class="nu">0</td><td class="nu">2</td><td class="sm">Única / Geral 2</td></tr>
+<tr><td class="cl">São Bento do Una</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Bom Conselho</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Canhotinho</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Altinho</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Panelas</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">São Caetano</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Catende</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Barreiros</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Ribeirão</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Itambé</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Nazaré da Mata</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Bom Jardim</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Paudalho</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Vertentes</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Glória do Goitá</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Bodocó</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Exu</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Ipubi</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Parnamirim</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Serrita</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Trindade</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Verdejante</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Afrânio</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Lagoa Grande</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Orocó</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Santa Maria da Boa Vista</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Carnaíba</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Itapetim</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Tabira</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Tuparetama</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Alagoinha</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Ibimirim</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Inajá</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Pedra</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Sanharó</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Venturosa</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Águas Belas</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Caetés</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Capoeiras</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Correntes</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Iati</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Itaíba</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Jupi</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Jurema</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Lajedo</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Saloá</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">São João</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Agrestina</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Brejo da Madre de Deus</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Cachoeirinha</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Camocim de São Félix</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Cupira</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Sairé</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Tacaimbó</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Taquaritinga do Norte</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Toritama</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Lagoa dos Gatos</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Maraial</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Quipapá</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Amaraji</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Cortês</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Gameleira</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Rio Formoso</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">São José da Coroa Grande</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Sirinhaém</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Tamandaré</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Itapissuma</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Aliança</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Condado</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Itaquitinga</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Macaparana</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Tracunhaém</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Vicência</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Cumaru</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Feira Nova</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">João Alfredo</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Lagoa de Itaenga</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Orobó</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Passira</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Santa Maria do Cambucá</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Pombos</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">São Joaquim do Monte</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Belém do São Francisco</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Flores</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Floresta</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Mirandiba</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">1</td><td class="nu">0</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">São José do Belmonte</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr><td class="cl">Triunfo</td><td class="nu">1</td><td class="nu">0,21%</td><td class="nu">0</td><td class="nu">1</td><td class="sm">Única / Geral 1</td></tr>
+<tr class="fim"><td>TOTAL</td><td class="nu">486</td><td class="nu">100,00%</td>
+<td class="nu">408</td><td class="nu">78</td><td></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Notas metodológicas</h2>
+    <div class="nota">
+      <p><b>Fonte.</b> Quadro Geral de Membros do MPPE (544 registros de cargo), extraído do dashboard
+      <span class="mono">quadro-membros-mppe</span>. Cada registro é um <b>cargo</b>, não um membro —
+      um mesmo membro pode responder por mais de um cargo.</p>
+      <p style="margin-top:10px"><b>Classificação.</b> A classe de atribuição é derivada do campo
+      <i>cargo</i> (mais específico) antes do campo <i>atribuição</i> (genérico), na mesma regra aplicada
+      pelo dashboard de origem. Substituto é verificado primeiro, para que cargos de Promotor de Justiça
+      Substituto não recaiam em Cível ou Geral.</p>
+      <p style="margin-top:10px"><b>Escopo — exclusão da 2ª Instância.</b> Os 58 cargos de
+      <i>Procurador de Justiça</i> (2ª Instância) foram <b>excluídos</b> deste relatório a pedido. O
+      quadro original tem 544 cargos; aqui se apresentam os 486 de <i>Promotor de Justiça</i>,
+      que atuam nas 3 entrâncias do 1º grau. A exclusão é exata: os 58 registros cujo cargo
+      contém "Procurador" coincidem, um a um, com os 58 da aba 2ª Instância — nenhum cargo de
+      promotoria foi removido por engano, e nenhum procurador permaneceu.</p>
+      <p style="margin-top:10px"><b>Diferença de base em relação ao modelo TJPE.</b> O modelo do TJPE
+      conta <i>unidades judiciárias</i> (193 varas e juizados). Este relatório conta <i>cargos do
+      Ministério Público</i> (486), que não guardam relação 1:1 com as varas — a estrutura do MP
+      segue circunscrições ministeriais próprias, e há cargos sem correspondência judicial direta
+      (substitutos, centrais de inquéritos, coordenações). O paralelo é de <b>estrutura de
+      classificação e apresentação</b>, não de grandeza.</p>
+      <p style="margin-top:10px"><b>Provimento.</b> "Vago" é o cargo sem membro designado na fonte
+      (sentinela <span class="mono">VAGO</span>), e não necessariamente cargo criado sem provimento.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>Fonte:</b> Quadro Geral de Membros do MPPE — 486 registros de cargo de promotoria,
+    130 municípios, 16 circunscrições (de 544 no quadro completo; 58 cargos de
+    Procurador de Justiça excluídos).</p>
+    <p><b>Modelo:</b> TJPE/GAJU — Varas e Competências (demonstrativo consolidado). A estrutura de
+    classificação, o demonstrativo por competência e a consolidação seguem aquele modelo.</p>
+    <p><b>Verificação:</b> as somas das classes coincidem com o total do quadro; cada linha do
+    demonstrativo foi derivada programaticamente da fonte, sem transcrição manual.</p>
+    <p class="mono">Gerado em 23/09/2026 · dados de 22/09/2026 · Hermes Agent</p>
+  </footer>
+</div>
+</body>
+</html>
